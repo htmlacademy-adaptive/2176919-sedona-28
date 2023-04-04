@@ -9,7 +9,7 @@
 
 <body class="page__body">
   <header class="main-header">
-    <a class="main-header__logo">
+    <a class="main-header__logo" href="index.html">
       <img class="main-header__logo-image" src="../images/logo-sedona.svg" alt="Логотип города Седона." width="185" height="96">
     </a>
     <nav class="main-navigation">
@@ -137,18 +137,6 @@
           </label>
         </fieldset>
         <button class="feedback-form__button button" type="submit">Отправить отзыв</button>
-        <div class="feedback-modal">
-          <div class="feedback-modal__modal-failure feedback-modal__modal-failure--close ">
-            <h2 class="feedback-modal__title">Что-то пошло не так!</h2>
-            <p class="feedback-modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-            <button class="feedback-modal__button button" type="button">Oк</button>
-          </div>
-          <div class="feedback__modal__modal-success feedback__modal__modal-success--close">
-            <h2 class="feedback-modal__title">Ваш отзыв отправлен!</h2>
-            <p class="feedback-modal__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам.В ближайшее время мы опубликуем его на сайте.</p>
-            <button class="feedback-modal__button button" type="button">Закрыть окно</button>
-          </div>
-        </div>
       </form>
       <p class="feedback__remark">* — обязательные поля</p>
     </section>
@@ -173,12 +161,23 @@
       </li>
     </ul>
     <div class="page-footer__copyright copyright">
-      <h2 class="copyright__title">Разработано</h2>
-      <a class="copyright__link" href="https://htmlacademy.ru/">
-        <img class="copyright__link-icon" src="" alt="Ссылка на htmlacademy." width="27" height="34">
+      <a class="copyright__link description" href="https://htmlacademy.ru/intensive/adaptive">Разработано
+        <img class="copyright__link-icon" src="../images/htmlacademy.svg" alt="Ссылка на интенсив по адаптивной верстке htmlacademy." width="27" height="34">
       </a>
     </div>
   </footer>
+  <div class="feedback-modal">
+    <div class="feedback-modal__modal-failure feedback-modal__modal-failure--close ">
+      <h2 class="feedback-modal__title">Что-то пошло не так!</h2>
+      <p class="feedback-modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+      <button class="feedback-modal__button button" type="button">Oк</button>
+    </div>
+    <div class="feedback__modal__modal-success feedback__modal__modal-success--close">
+      <h2 class="feedback-modal__title">Ваш отзыв отправлен!</h2>
+      <p class="feedback-modal__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам.В ближайшее время мы опубликуем его на сайте.</p>
+      <button class="feedback-modal__button button" type="button">Закрыть окно</button>
+    </div>
+  </div>
 </body>
 
 </html>

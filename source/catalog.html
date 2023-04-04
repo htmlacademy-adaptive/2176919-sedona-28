@@ -9,7 +9,7 @@
 
 <body class="page__body">
   <header class="main-header">
-    <a class="main-header__logo">
+    <a class="main-header__logo" href="index.html">
       <img class="main-header__logo-image" src="../images/logo-sedona.svg" alt="Логотип города Седона." width="185" height="96">
     </a>
     <nav class="main-navigation">
@@ -42,36 +42,36 @@
       <p class="catalog-index__description description">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
       <ul class="photo-catalog__list">
         <li class="photo-catalog__item">
-          <img class="photo-catalog__image" src="../images/expanses.jpg" alt="Изображение дороги ведущей к городку Седона." width="280" height="280">
+          <a class="photo-catalog__link">
+            <img class="photo-catalog__image" src="../images/expanses.jpg" alt="Изображение дороги ведущей к городку Седона." width="280" height="280">
+          </a>
           <h3 class="photo-catalog__title">Неродные просторы</h3>
           <p class="photo-catalog__autor-name">Автор фото: Борис</p>
-          <button class="photo-catalog__like-button like-button" type="submit">
-            <span class="like-button__amount">1350</span>
-          </button>
+          <span class="photo-catalog__likes">1350</span>
         </li>
         <li class="photo-catalog__item">
-          <img class="photo-catalog__image" src="../images/vegetation.jpg" alt="Изображение местной флоры." width="280" height="280">
+          <a class="photo-catalog__link">
+            <img class="photo-catalog__image" src="../images/vegetation.jpg" alt="Изображение местной флоры." width="280" height="280">
+          </a>
           <h3 class="photo-catalog__title">Местная растительность</h3>
           <p class="photo-catalog__autor-name">Автор фото: Сергей</p>
-          <button class="photo-catalog__like-button like-button" type="submit">
-            <span class="like-button__amount">143</span>
-          </button>
+          <span class="photo-catalog__likes">143</span>
         </li>
         <li class="photo-catalog__item">
-          <img class="photo-catalog__image" src="../images/road-north.jpg" alt="Изображение наших горных дорог." width="280" height="280">
+          <a class="photo-catalog__link">
+            <img class="photo-catalog__image" src="../images/road-north.jpg" alt="Изображение наших горных дорог." width="280" height="280">
+          </a>
           <h3 class="photo-catalog__title">Дорога на север</h3>
           <p class="photo-catalog__autor-name">Автор фото: Петр</p>
-          <button class="photo-catalog__like-button like-button" type="submit">
-            <span class="like-button__amount">96</span>
-          </button>
+          <span class="photo-catalog__likes">96</span>
         </li>
         <li class="photo-catalog__item">
-          <img class="photo-catalog__image" src="../images/catalog-devils-bridge.jpg" alt="Изображение знаменитого Моста Дьявола." width="280" height="280">
+          <a class="photo-catalog__link">
+            <img class="photo-catalog__image" src="../images/catalog-devils-bridge.jpg" alt="Изображение знаменитого Моста Дьявола." width="280" height="280">
+          </a>
           <h3 class="photo-catalog__title">Мост Дьявола</h3>
           <p class="photo-catalog__autor-name">Автор фото: Антон</p>
-          <button class="photo-catalog__like-button like-button" type="submit">
-            <span class="like-button__amount">254</span>
-          </button>
+          <span class="photo-catalog__likes">254</span>
         </li>
       </ul>
     </section>
@@ -79,6 +79,7 @@
       <h2 class="video-catalog__title title">Все еще сомневаетесь?</h2>
       <p class="video-catalog__text description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
       <img class="video-catalog__image" src="../images/video-cover.jpg" alt="Обложка видео-презентации." width="280" height="177">
+      <button class="video-catalog__button" type="button"></button>
     </section>
   </main>
   <footer class="page-footer">
@@ -101,9 +102,8 @@
       </li>
     </ul>
     <div class="page-footer__copyright copyright">
-      <h2 class="copyright__title">Разработано</h2>
-      <a class="copyright__link" href="https://htmlacademy.ru/">
-        <img class="copyright__link-icon" src="" alt="Ссылка на htmlacademy." width="27" height="34">
+      <a class="copyright__link description" href="https://htmlacademy.ru/intensive/adaptive">Разработано
+        <img class="copyright__link-icon" src="../images/htmlacademy.svg" alt="Ссылка на интенсив по адаптивной верстке htmlacademy." width="27" height="34">
       </a>
     </div>
   </footer>
