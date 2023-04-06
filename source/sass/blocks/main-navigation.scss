@@ -1,0 +1,30 @@
+.main-navigation {
+  position: relative;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.main-navigation__link {
+  display: block;
+  padding: 17px 0 12px 0;
+  text-decoration: none;
+  color: #ffffff;
+  box-shadow: 0 1px rgba(1, 1, 1, 0.2);
+}
+
+.main-navigation__list {
+  position: absolute;
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #81b3d2;
+}
+
+.main-navigation__toggle {
+  position: absolute;
+}
+
+.main-navigation__list--close {
+  display: none;
+}
