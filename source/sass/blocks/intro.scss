@@ -1,0 +1,25 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #b3d8ef;
+  background-image: url("../img/background-images/hiro-background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.intro__image {
+  padding: 90px 0 85px 0;
+  width: 282px;
+  height: 100%;
+}
+
+.intro__image--inner {
+  padding: 52px 0 67px 0;
+  width: 229px;
+}
+
+.intro--inner {
+  background-image: url("../img/background-images/form-hiro-background.jpg");
+}

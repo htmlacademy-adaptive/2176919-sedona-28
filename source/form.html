@@ -5,15 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Форма отзыва</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
   <header class="main-header">
     <a class="main-header__logo" href="index.html">
-      <img class="main-header__logo-image" src="../images/logo-sedona.svg" alt="Логотип города Седона." width="185" height="96">
+      <img class="main-header__logo-image" src="./img/content-images/logo-sedona.svg" alt="Логотип города Седона." width="185" height="96">
     </a>
     <nav class="main-navigation">
-      <ul class="main-navigation__list">
+      <button class="main-navigation__toggle" type="button">
+        <span class="visually-hidden">Открыть меню.</span>
+      </button>
+      <ul class="main-navigation__list main-navigation__list--close">
         <li class="main-navigation__item">
           <a class="main-navigation__link" href="index.html">Главная</a>
         </li>
@@ -27,20 +31,19 @@
           <a class="main-navigation__link" href="https://htmlacademy.ru" lang="en">HTML ACADEMY</a>
         </li>
       </ul>
-      <button class="main-navigation__toggle" type="button">
-        <span class="visually-hidden">Открыть меню.</span>
-      </button>
     </nav>
   </header>
   <main class="form-index">
     <h1 class="visually-hidden">Форма обратной связи городка Седона.</h1>
-    <div class="form-index__presentation">
-      <img class="form-index__presentation-hero" src="../images/sedona-intro.svg" alt="Седона." width="229" height="39">
+    <div class="form-index__presentation intro intro--inner">
+      <img class="intro__image intro__image--inner" src="./img/content-images/sedona-intro.svg" alt="Седона." width="229" height="39">
     </div>
     <section class="feedback">
-      <h2 class="feedback__title title">Оставьте свой отзыв</h2>
-      <p class="feedback__description description">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
-      <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="post">
+      <div class="feedback__intro content content--form">
+        <h2 class="feedback__title title">Оставьте свой отзыв</h2>
+        <p class="feedback__description description">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+      </div>
+        <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="post">
         <fieldset class="feedback-form__group feedback-form__group--introduce">
           <legend class="feedback-form__title title">Представьтесь:</legend>
           <ul class="feedback-form__list">
@@ -136,43 +139,47 @@
             <textarea class="feedback-form__textarea" id="emotions" name="emotions" placeholder="Опишите подробно все свои восторги"></textarea>
           </label>
         </fieldset>
-        <button class="feedback-form__button button" type="submit">Отправить отзыв</button>
       </form>
-      <p class="feedback__remark">* — обязательные поля</p>
+      <div class="content content--form">
+        <button class="feedback__button button" type="submit">Отправить отзыв</button>
+        <p class="feedback__remark">* — обязательные поля</p>
+      </div>
     </section>
   </main>
   <footer class="page-footer">
-    <h2 class="page-footer__title" lang="en">#VISITSEDONA</h2>
-    <ul class="page-footer__social-list">
-      <li class="page-footer__social-item">
-        <a class="page-footer__social-link page-footer__social-link--vk" href="https://vk.com/htmlacademy">
-          <span class="visually-hidden">Седона ВКонтакте.</span>
+    <div class="content content--form">
+      <h2 class="page-footer__title" lang="en">#VISITSEDONA</h2>
+      <ul class="page-footer__social-list">
+        <li class="page-footer__social-item">
+          <a class="page-footer__social-link page-footer__social-link--vk" href="https://vk.com/htmlacademy">
+            <span class="visually-hidden">Седона ВКонтакте.</span>
+          </a>
+        </li>
+        <li class="page-footer__social-item">
+          <a class="page-footer__social-link page-footer__social-link--telegram" href="https://t.me/htmlacademy">
+            <span class="visually-hidden">Седона в Телеграм.</span>
+          </a>
+        </li>
+        <li class="page-footer__social-item">
+          <a class="page-footer__social-link page-footer__social-link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+            <span class="visually-hidden">Седона на YouTube.</span>
+          </a>
+        </li>
+      </ul>
+      <div class="page-footer__copyright copyright">
+        <a class="copyright__link description" href="https://htmlacademy.ru/intensive/adaptive">Разработано
+          <img class="copyright__link-icon" src="./img/content-images/htmlacademy.svg" alt="Ссылка на интенсив по адаптивной верстке htmlacademy." width="27" height="34">
         </a>
-      </li>
-      <li class="page-footer__social-item">
-        <a class="page-footer__social-link page-footer__social-link--telegram" href="https://t.me/htmlacademy">
-          <span class="visually-hidden">Седона в Телеграм.</span>
-        </a>
-      </li>
-      <li class="page-footer__social-item">
-        <a class="page-footer__social-link page-footer__social-link--youtube" href="https://www.youtube.com/user/htmlacademyru">
-          <span class="visually-hidden">Седона на YouTube.</span>
-        </a>
-      </li>
-    </ul>
-    <div class="page-footer__copyright copyright">
-      <a class="copyright__link description" href="https://htmlacademy.ru/intensive/adaptive">Разработано
-        <img class="copyright__link-icon" src="../images/htmlacademy.svg" alt="Ссылка на интенсив по адаптивной верстке htmlacademy." width="27" height="34">
-      </a>
+      </div>
     </div>
   </footer>
   <div class="feedback-modal">
     <div class="feedback-modal__modal-failure feedback-modal__modal-failure--close ">
       <h2 class="feedback-modal__title">Что-то пошло не так!</h2>
       <p class="feedback-modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-      <button class="feedback-modal__button button" type="button">Oк</button>
+      <button class="feedback-modal__button button button--modal-failure" type="button">Oк</button>
     </div>
-    <div class="feedback__modal__modal-success feedback__modal__modal-success--close">
+    <div class="feedback-modal__modal-success feedback-modal__modal-success--close">
       <h2 class="feedback-modal__title">Ваш отзыв отправлен!</h2>
       <p class="feedback-modal__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам.В ближайшее время мы опубликуем его на сайте.</p>
       <button class="feedback-modal__button button" type="button">Закрыть окно</button>
