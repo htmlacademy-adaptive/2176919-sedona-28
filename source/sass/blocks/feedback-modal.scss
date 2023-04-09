@@ -1,11 +1,17 @@
+@use "../global/variables.scss" as *;
+
 .feedback-modal__modal-failure {
+  margin: auto;
   padding: 45px 42px 35px 42px;
   text-align: center;
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+  max-width: 400px;
 }
 
 .feedback-modal__modal-success {
+  margin: auto;
   padding: 39px 20px 20px 20px;
   text-align: center;
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+  max-width: 640px;
 }

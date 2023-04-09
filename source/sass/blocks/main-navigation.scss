@@ -1,3 +1,6 @@
+@use "../global/mixins.scss" as *;
+@use "../global/variables.scss" as *;
+
 .main-navigation {
   position: relative;
   text-align: center;
@@ -12,15 +15,30 @@
   text-decoration: none;
   color: #ffffff;
   box-shadow: 0 1px rgba(1, 1, 1, 0.2);
+
+  @media (min-width: $tablet-width) {
+    color: #000000;
+    box-shadow: none;
+  }
 }
 
 .main-navigation__list {
+  @include reset-list;
   position: absolute;
   width: 100%;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
   background-color: #81b3d2;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: transparent;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .main-navigation__link--current {
+    color: #766357;
+  }
 }
 
 .main-navigation__toggle {
@@ -29,4 +47,8 @@
 
 .main-navigation__list--close {
   display: none;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+  }
 }

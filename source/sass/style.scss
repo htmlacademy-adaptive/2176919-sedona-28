@@ -1,5 +1,8 @@
+// глобальные стили
 @use "./global/global.scss";
 @use "./global/fonts.scss";
+
+// стили блоков
 @use "./blocks/page.scss";
 @use "./blocks/main-header.scss";
 @use "./blocks/main-navigation.scss";

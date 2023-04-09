@@ -1,8 +1,4 @@
-.feedback__remark {
-  margin: 0;
-  text-align: right;
-  font-size: 12px;
-}
+@use "../global/variables.scss" as *;
 
 .feedback__intro {
   padding: 86px 20px 28px 20px;
@@ -10,4 +6,21 @@
 
 .feedback__title {
   margin: 0 0 24px 0;
+}
+
+.feedback__remark {
+  margin: 0;
+  text-align: right;
+  font-size: 12px;
+}
+
+.feedback__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3px;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

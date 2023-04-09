@@ -1,21 +1,31 @@
+@use "../global/mixins.scss" as *;
+@use "../global/variables.scss" as *;
+
 .advantages__intro {
   padding: 32px 18px;
 }
 
 .advantages__list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
+  @include reset-list;
+  counter-reset: advantage;
 
-.advantages__item--photo {
-  color: #ffffff;
-  background-color: #81b3d2;
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .advantages__photo {
   display: block;
   width: 100%;
+  background-color: #81b3d2;
+}
+
+.advantages__list .advantages__description::before {
+  display: block;
+  margin-bottom: 17px;
+  content: "— №" counter(advantage) "—";
+  counter-increment: advantage;
 }
 
 .advantages__title {
@@ -26,14 +36,26 @@
   margin: 0 0 35px 0;
 }
 
-.advantages__item {
-  padding: 32px 18px;
-}
-
 .advantages__item-wrapper {
   padding: 32px 18px;
+  background-color: #81b3d2;
+  color: #ffffff;
 }
 
 .advantages__item--short {
   background-color: #eeeeee;
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+  @media (min-width: $tablet-width) {
+    padding: 41px 33px;
+  }
+}
+
+.advantages__item--photo {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    grid-column: 1/-1;
+    grid-row: 2/3;
+  }
 }

@@ -1,10 +1,21 @@
+@use "../global/mixins.scss" as *;
+@use "../global/variables.scss" as *;
+
 .photo-catalog__list {
+  @include reset-list;
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 25px;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .photo-catalog__link {
@@ -29,4 +40,8 @@
 .photo-catalog__likes {
   font-weight: 700;
   color: #000000;
+}
+
+.photo-catalog__item--first {
+  grid-column: 1/-1;
 }
