@@ -1,18 +1,35 @@
+@use "../global/mixins.scss" as *;
+@use "../global/variables.scss" as *;
+
 .feedback-form {
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 24px;
   padding: 24px 20px 56px 20px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .feedback-form__list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+  @include reset-list;
 }
 
 .feedback-form__group {
   border: none;
+}
+
+.feedback-form__group--impression {
+  grid-column: 1/-1;
+}
+
+.feedback-form__group--landmark {
+  grid-column: 1/-1;
+}
+
+.feedback-form__group--emotions {
+  grid-column: 1/-1;
 }
 
 .feedback-form__item {

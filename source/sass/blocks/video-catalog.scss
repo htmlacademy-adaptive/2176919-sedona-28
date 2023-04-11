@@ -1,6 +1,7 @@
 .video-catalog {
+  padding: 17px 20px 0 20px;
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 38px;
-  padding: 17px 20px 0 20px;
+  justify-items: center;
 }

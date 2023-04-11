@@ -1,13 +1,37 @@
+@use "../global/mixins.scss" as *;
+@use "../global/variables.scss" as *;
+
+@media (min-width: $tablet-width) {
+  .services {
+    grid-column: 1/4;
+    grid-row: 1/2;
+  }
+}
+
 .services__list {
-  list-style-type: none;
-  margin: 0;
+  @include reset-list;
   padding: 23px 18px 46px 65px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    padding: 0;
+  }
 }
 
 .services__title {
   margin: 0 0 16px 0;
+  text-align: left;
+
+  @media (min-width: $tablet-width) {
+    text-align: center;
+  }
 }
 
 .services__item {
   margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    padding: 33px;
+    text-align: center;
+  }
 }
