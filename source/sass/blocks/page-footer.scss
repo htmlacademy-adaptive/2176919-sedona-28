@@ -1,10 +1,6 @@
 @use "../global/mixins.scss" as *;
 @use "../global/variables.scss" as *;
 
-.page-footer {
-  padding: 33px 20px;
-}
-
 .page-footer__wrapper {
   padding: 33px 18px;
   display: grid;
@@ -12,8 +8,13 @@
   gap: 30px;
 
   @media (min-width: $tablet-width) {
+    padding: 36px 60px;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 36px 120px;
   }
 }
 

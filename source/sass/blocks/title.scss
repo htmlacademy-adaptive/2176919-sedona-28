@@ -1,3 +1,5 @@
+@use "../global/variables.scss" as *;
+
 .title {
   padding: 0;
   font-weight: 700;
@@ -5,6 +7,10 @@
   line-height: 26px;
   color: #000000;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+  }
 }
 
 .title--photo {
@@ -13,4 +19,8 @@
 
 .title--basic {
   font-size: 21px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+  }
 }

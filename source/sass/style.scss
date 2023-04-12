@@ -4,12 +4,13 @@
 
 // стили блоков
 @use "./blocks/page.scss";
+@use "./blocks/content.scss";
+@use "./blocks/title.scss";
 @use "./blocks/main-header.scss";
 @use "./blocks/main-navigation.scss";
 @use "./blocks/visually-hidden.scss";
 @use "./blocks/intro.scss";
 @use "./blocks/advantages.scss";
-@use "./blocks/title.scss";
 @use "./blocks/description.scss";
 @use "./blocks/hotel-search.scss";
 @use "./blocks/button.scss";
@@ -22,5 +23,4 @@
 @use "./blocks/photo-catalog.scss";
 @use "./blocks/video-catalog.scss";
 @use "./blocks/services.scss";
-@use "./blocks/content.scss";
 @use "./blocks/feedback-modal.scss";
