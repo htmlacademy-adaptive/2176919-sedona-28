@@ -1,7 +1,98 @@
+.control {
+  position: relative;
+  display: block;
+  padding-left: 62px;
+  padding-top: 10px;
+  cursor: pointer;
+}
+
 .control__label {
   text-transform: none;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
   color: #000000;
+}
+
+.control__mark {
+  background-color: #f2f2f2;
+}
+
+.control__mark::before {
+  content: "";
+}
+
+.control__mark,
+.control__mark::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 46px;
+  height: 46px;
+  border-radius: 4px;
+}
+
+.control__mark--radio,
+.control__mark--radio::before {
+  border-radius: 50%;
+}
+
+.control__input:checked {
+  + .control__mark::before {
+    background-color: #333333;
+  }
+
+  + .control__mark--checkbox::before {
+    mask-image: var(--check-mark);
+    mask-repeat: no-repeat;
+    mask-position: center;
+  }
+
+  + .control__mark--radio::before {
+    border: solid 15px #f2f2f2;
+  }
+}
+
+.control__input:hover {
+  + .control__mark {
+    background-color: #e5e5e5;
+  }
+
+  + .control__mark--radio::before {
+    border-color: #e5e5e5;
+  }
+}
+
+.control__input:active {
+  + .control__mark {
+    background-color: #d5d5d5;
+  }
+
+  + .control__mark--radio::before {
+    border-color: #d5d5d5;
+  }
+
+  + .control__mark::before {
+    background-color: rgba(51, 51, 51, 0.3);
+  }
+}
+
+.control__input:disabled {
+  + .control__mark {
+    opacity: 0.1;
+  }
+}
+
+.control__input:focus-visible {
+  + .control__mark {
+    outline: solid;
+  }
+}
+
+@supports not selector(:focus-visible) {
+  .control__input:focus {
+    + .control__mark {
+      outline: solid;
+    }
+  }
 }

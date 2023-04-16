@@ -28,15 +28,38 @@
 }
 
 .page-footer__social-item {
-  width: 48px;
-  height: 48px;
-  background-color: #81b3d2;
+  display: contents;
 }
 
 .page-footer__social-link {
   text-decoration: none;
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  background-color: #81b3d2;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.page-footer__social-link--vk {
+  @include button-shape;
+  background-image: url("../img/icons/vk.svg");
+}
+
+.page-footer__social-link--telegram {
+  @include button-shape;
+  background-image: url("../img/icons/telegram.svg");
+}
+
+.page-footer__social-link--youtube {
+  @include button-shape;
+  background-image: url("../img/icons/youtube.svg");
 }
 
 .page-footer__title {
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    text-align: start;
+  }
 }

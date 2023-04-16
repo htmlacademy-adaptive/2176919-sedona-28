@@ -1,4 +1,7 @@
+@use "../global/mixins.scss" as *;
+
 .button {
+  @include button-shape;
   padding: 16px 0;
   width: 100%;
   font-family: inherit;

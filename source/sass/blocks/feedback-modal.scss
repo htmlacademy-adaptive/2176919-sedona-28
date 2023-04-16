@@ -1,3 +1,4 @@
+@use "../global/mixins.scss" as *;
 @use "../global/variables.scss" as *;
 
 .feedback-modal__modal-failure {
@@ -14,4 +15,14 @@
   text-align: center;
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
   max-width: 640px;
+
+  .feedback-modal__text {
+    @media (min-width: $tablet-width) {
+      @include edge-distance(80px);
+    }
+  }
+}
+
+.feedback-modal__text {
+  @include edge-distance(17px);
 }

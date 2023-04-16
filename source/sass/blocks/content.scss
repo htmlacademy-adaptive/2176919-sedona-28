@@ -1,12 +1,21 @@
+@use "../global/mixins.scss" as *;
+@use "../global/variables.scss" as *;
+
 .content {
-  padding-left: 18px;
-  padding-right: 18px;
+  @include edge-distance(18px);
   text-align: center;
 }
 
 .content--form {
-  padding-left: 20px;
-  padding-right: 20px;
+  @include edge-distance(20px);
+
+  @media (min-width: $tablet-width) {
+    @include edge-distance(60px);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include edge-distance(120px);
+  }
 }
 
 .content--catalog {

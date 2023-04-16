@@ -58,6 +58,12 @@
       display: none;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    br {
+      display: none;
+    }
+  }
 }
 
 .advantages__title--intro {
@@ -78,12 +84,33 @@
 
 .advantages__item--short {
   background-color: #eeeeee;
-  padding-top: 24px;
-  padding-bottom: 24px;
+
+  @media (max-width: $mobile-width-only) {
+    padding: 24px 35px 28px 35px;
+    position: relative;
+
+    &:not(:last-child)::before {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 18px;
+      width: calc(100% - 36px);
+      height: 1px;
+      background-color: #d6d6d6;
+    }
+
+    br {
+      display: none;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     padding: 41px 33px;
     min-width: 256px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 52px 50px;
   }
 }
 

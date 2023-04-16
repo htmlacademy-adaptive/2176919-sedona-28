@@ -1,7 +1,19 @@
+@use "../global/mixins.scss" as *;
 @use "../global/variables.scss" as *;
 
 .feedback__intro {
-  padding: 86px 20px 28px 20px;
+  padding-top: 36px;
+  padding-bottom: 28px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 64px;
+    padding-bottom: 84px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 115px;
+    padding-bottom: 44px;
+  }
 }
 
 .feedback__title {
@@ -19,8 +31,22 @@
   grid-template-columns: 1fr;
   gap: 3px;
   align-items: center;
+  margin-bottom: 22px;
 
   @media (min-width: $tablet-width) {
     grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include edge-distance(216px);
+  }
+}
+
+.feedback__description {
+  @media (max-width: $mobile-width-only) {
+    br {
+      display: none;
+    }
   }
 }
