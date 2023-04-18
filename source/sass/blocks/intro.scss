@@ -1,3 +1,5 @@
+@use "../global/variables.scss" as *;
+
 .intro {
   display: flex;
   flex-direction: column;
@@ -13,6 +15,10 @@
   padding: 90px 0 85px 0;
   width: 282px;
   height: 100%;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 77px;
+  }
 }
 
 .intro__image--inner {

@@ -1,9 +1,17 @@
+@use "../global/variables.scss" as *;
+@use "../global/mixins.scss" as *;
+
 .copyright__link {
+  @include menu-shape;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #000000;
   text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    justify-content: end;
+  }
 }
 
 .copyright__link-icon {
