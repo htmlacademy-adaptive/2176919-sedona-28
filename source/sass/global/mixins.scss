@@ -27,10 +27,12 @@
 @mixin menu-shape {
   &:hover {
     color: #81b3d2;
+    fill: #81b3d2;
   }
 
   &:active {
     color: rgba(0, 0, 0, 0.3);
+    fill: rgba(0, 0, 0, 0.3);
   }
 }
 

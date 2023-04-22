@@ -1,31 +1,80 @@
 @use "../global/variables.scss" as *;
 
 .intro {
+  padding: 90px 0 85px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #b3d8ef;
-  background-image: url("../img/background-images/hiro-background.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
+  background-image: url("../img/background-images/wings-phone.svg"), url("../img/background-images/hero-background.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom, center;
+  background-size: cover, cover;
 
-.intro__image {
-  padding: 90px 0 85px 0;
-  width: 282px;
-  height: 100%;
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/background-images/wings-phone.svg"), url("../img/background-images/hero-background@2x.jpg");
+    background-size: 320px auto;
+  }
 
-  @media (min-width: $tablet-width) {
-    padding-top: 77px;
+  @media (min-width: 321px) and (max-width: 768px) {
+    padding-top: 78px;
+    padding-bottom: 90px;
+    background-image: url("../img/background-images/wings-tablet.svg"), url("../img/background-images/hero-background-tablet.jpg");
+    background-position: bottom, center;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background-images/wings-tablet.svg"), url("../img/background-images/hero-background-tablet@2x.jpg");
+      background-size: 768px auto;
+    }
+  }
+
+  @media (min-width: 769px) {
+    background-image: url("../img/background-images/wings-desktop.svg"), url("../img/background-images/hero-background-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background-images/wings-desktop.svg"), url("../img/background-images/hero-background-desktop@2x.jpg");
+      background-size: 1200px auto;
+    }
   }
 }
 
-.intro__image--inner {
+.intro--inner {
   padding: 52px 0 67px 0;
-  width: 229px;
+  background-image: url("../img/background-images/wings-phone.svg"), url("../img/background-images/form-hero-background.jpg");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/background-images/wings-phone.svg"), url("../img/background-images/form-hero-background@2x.jpg");
+    background-size: 320px auto;
+  }
+
+  @media (min-width: 321px) and (max-width: 768px) {
+    padding-top: 95px;
+    padding-bottom: 60px;
+    background-image: url("../img/background-images/wings-tablet.svg"), url("../img/background-images/form-hero-background-tablet.jpg");
+    background-position: bottom, center;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background-images/wings-tablet.svg"), url("../img/background-images/form-hero-background-tablet@2x.jpg");
+      background-size: 768px auto;
+    }
+  }
+
+  @media (min-width: 769px) {
+    background-image: url("../img/background-images/wings-desktop.svg"), url("../img/background-images/form-hero-background-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background-images/wings-desktop.svg"), url("../img/background-images/form-hero-background-desktop@2x.jpg");
+      background-size: 1200px auto;
+    }
+  }
 }
 
-.intro--inner {
-  background-image: url("../img/background-images/form-hiro-background.jpg");
+.intro__image {
+  display: block;
+  width: 282px;
+  height: 100%;
+}
+
+.intro__image--inner {
+  width: 229px;
 }

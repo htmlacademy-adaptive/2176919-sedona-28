@@ -20,22 +20,33 @@
   margin: 0 0 24px 0;
 }
 
+.feedback__button {
+  max-width: 384px;
+
+  @media (min-width: $tablet-width) {
+    justify-self: end;
+  }
+}
+
 .feedback__remark {
   margin: 0;
   text-align: right;
   font-size: 12px;
+  max-width: 384px;
 }
 
 .feedback__wrapper {
   display: grid;
   grid-template-columns: 1fr;
   gap: 3px;
+  justify-items: center;
   align-items: center;
   margin-bottom: 22px;
 
   @media (min-width: $tablet-width) {
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: 22px;
+    justify-items: stretch;
   }
 
   @media (min-width: $desktop-width) {
