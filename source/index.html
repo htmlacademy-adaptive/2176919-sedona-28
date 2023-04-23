@@ -6,6 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/manifest.webmanifest">
 </head>
 
 <body class="page__body">
@@ -47,9 +52,13 @@
           <div class="advantages__item advantages__item--photo">
             <div class="advantages__item-wrapper content">
               <h2 class="advantages__title title title--photo">Настоящий <br>городок</h2>
-              <p class="advantages__description description">Седона — не аттракцион для туристов, там течёт своя <br>жизнь</p>
+              <p class="advantages__description description">Седона — не аттракцион для туристов, там течёт&nbsp;своя жизнь</p>
             </div>
-            <img class="advantages__photo" src="./img/content-images/photo-city.jpg" alt="Городок Седона." width="320" height="260">
+            <picture>
+              <source media="(min-width: 769px)" srcset="./img/content-images/photo-city-desktop.jpg 1x, ./img/content-images/photo-city-desktop@2x.jpg 2x" width="800" height="256">
+              <source media="(min-width: 321px) and (max-width: 768px)" srcset="./img/content-images/photo-city-tablet.jpg 1x, ./img/content-images/photo-city-tablet@2x.jpg 2x" width="512" height="256">
+              <img class="advantages__photo" src="./img/content-images/photo-city.jpg" srcset="./img/content-images/photo-city@2x.jpg 2x" alt="Городок Седона." width="320" height="260">
+            </picture>
           </div>
           <ul class="services__list">
             <li class="services__item">
@@ -67,10 +76,17 @@
           </ul>
         </li>
         <li class="advantages__item advantages__item--photo">
-          <img class="advantages__photo" src="./img/content-images/devils-bridge.jpg" alt="Мост дьявола." width="320" height="260">
+          <picture>
+            <source media="(min-width: 769px)" srcset="./img/content-images/devils-bridge-desktop.jpg 1x, ./img/content-images/devils-bridge-desktop@2x.jpg 2x">
+            <source media="(min-width: 321px) and (max-width: 768px)" srcset="./img/content-images/devils-bridge-tablet.jpg 1x, ./img/content-images/devils-bridge-tablet@2x.jpg 2x">
+            <img class="advantages__photo" src="./img/content-images/devils-bridge.jpg" srcset="./img/content-images/devils-bridge@2x.jpg 2x" alt="Мост дьявола." width="320" height="260">
+          </picture>
           <div class="advantages__item-wrapper content">
             <h2 class="advantages__title title title--photo">Там есть <br>мост&nbsp;дьявола</h2>
-            <p class="advantages__description description">Да, по нему можно <br>пройти! Если вы осмелитесь, конечно</p>
+            <p class="advantages__description description">
+              <span>Да, по нему можно <br>пройти!</span>
+              <span>Если вы осмелитесь,&nbsp;конечно</span>
+            </p>
           </div>
         </li>
         <li class="advantages__item advantages__item--short content">
@@ -83,7 +99,7 @@
         </li>
         <li class="advantages__item advantages__item--short content">
           <h2 class="advantages__title title">Мало <br>туристов</h2>
-          <p class="advantages__description description">Большинство едет в Гранд Каньон и&nbsp;толпится там</p>
+          <p class="advantages__description description">Большинство едет в Гранд Каньон и толпится там</p>
         </li>
       </ol>
     </section>
@@ -117,8 +133,9 @@
         </li>
       </ul>
       <div class="page-footer__copyright copyright">
+        <span class="visually-hidden">Ссылка на интенсив по адаптивной верстке htmlacademy.</span>
         <a class="copyright__link description" href="https://htmlacademy.ru/intensive/adaptive">Разработано
-          <img class="copyright__link-icon" src="./img/content-images/htmlacademy.svg" alt="Ссылка на интенсив по адаптивной верстке htmlacademy." width="27" height="34">
+          <svg class="copyright__link-icon" width="27" height="35" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.65.45h-.1L.05 1.85v24.7l13.5 8 13.4-8V1.85L13.65.45Zm11.4 12.1-11.5-6.8v-.1h-.1l-.1-.1v.1l-11.4 6.9v-9l11.5-1.2 11.6 1.2v9Zm-11.6-5.3 11.5 6.7-4.5 2.6-7.1-4.2v1.4l5.9 3.5-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1-11.4-6.7 11.4-6.8Zm-11.5 8.3 11.4 6.8v1l-7.9-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.1-4.9v-5.2l3.4-2v10l-11.5 6.9-11.5-6.8v-9.9Z"/></svg>
         </a>
       </div>
     </div>

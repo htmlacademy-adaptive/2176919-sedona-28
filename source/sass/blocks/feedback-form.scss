@@ -54,16 +54,24 @@
       background-color: #dbdbdb;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    &:first-child::before {
+      right: -49px;
+    }
+  }
 }
 
 .feedback-form__group--impression {
   .feedback-form__list {
     @media (min-width: $tablet-width) {
+      padding-left: 36px;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
     }
 
     @media (min-width: $desktop-width) {
+      padding-left: 53px;
       grid-template-columns: repeat(3, 1fr);
       column-gap: 60px;
     }
@@ -77,12 +85,14 @@
 .feedback-form__group--landmark {
   .feedback-form__list {
     @media (min-width: $tablet-width) {
+      padding-left: 88px;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       column-gap: 31px;
     }
 
     @media (min-width: $desktop-width) {
+      padding-left: 45px;
       grid-template-columns: repeat(4, 1fr);
     }
   }
@@ -92,47 +102,44 @@
   }
 }
 
+.feedback-form__group--emotions {
+  @media (min-width: $tablet-width) {
+    text-align: center;
+  }
+}
+
+
 .feedback-form__group--special {
   grid-column: 1/-1;
 
   @media (min-width: $tablet-width) {
-    .feedback-form__title::before,
-    .feedback-form__title::after {
-      position: absolute;
-      content: "";
-      top: 10px;
-      width: 123px;
-      height: 1px;
-      background-color: #dbdbdb;
-    }
+    border-top: solid 1px #dbdbdb;
 
-    .feedback-form__title::before {
-      left: 0;
-    }
-
-    .feedback-form__title::after {
-      right: 0;
+    .feedback-form__title {
+      width: 402px;
+      background-color: #ffffff;
     }
   }
 
   @media (min-width: $desktop-width) {
-    .feedback-form__title::before,
-    .feedback-form__title::after {
-      width: 280px;
+    .feedback-form__title {
+      width: 400px;
+      margin-bottom: 45px;
     }
   }
 }
 
 .feedback-form__item {
+  margin-bottom: 16px;
   position: relative;
   display: flex;
   flex-direction: column;
-  margin-bottom: 16px;
 }
 
 .feedback-form__input {
   @include input-shape;
   padding: 16px;
+  font-family: inherit;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
@@ -171,8 +178,8 @@
 }
 
 .feedback-form__label {
-  @media (min-width: $desktop-width) {
-    @include edge-distance(96px);
+  &:not(:last-child) {
+    padding-left: 16px;
   }
 }
 
@@ -181,6 +188,7 @@
   width: 100%;
   max-width: 768px;
   min-height: 150px;
+  font-family: inherit;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
