@@ -48,8 +48,8 @@
   }
 
   @media (min-width: 321px) and (max-width: 768px) {
-    padding-top: 95px;
-    padding-bottom: 60px;
+    padding-top: 96px;
+    padding-bottom: 108px;
     background-image: url("../img/background-images/wings-tablet.svg"), url("../img/background-images/form-hero-background-tablet.jpg");
     background-position: bottom, center;
 
@@ -60,6 +60,8 @@
   }
 
   @media (min-width: 769px) {
+    padding-top: 103px;
+    padding-bottom: 120px;
     background-image: url("../img/background-images/wings-desktop.svg"), url("../img/background-images/form-hero-background-desktop.jpg");
 
     @media (min-resolution: 2dppx) {
@@ -73,8 +75,24 @@
   display: block;
   width: 282px;
   height: 100%;
+
+  @media (min-width: $tablet-width) {
+    width: 461px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 460px;
+  }
 }
 
 .intro__image--inner {
   width: 229px;
+
+  @media (min-width: $tablet-width) {
+    width: 457px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 460px;
+  }
 }
