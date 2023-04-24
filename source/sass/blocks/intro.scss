@@ -86,13 +86,17 @@
 }
 
 .intro__image--inner {
-  width: 229px;
+  width: 280px;
+
+  @media (min-width: $intermediate-width) {
+    width: 472px;
+  }
 
   @media (min-width: $tablet-width) {
-    width: 457px;
+    width: 728px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 460px;
+    width: 730px;
   }
 }
