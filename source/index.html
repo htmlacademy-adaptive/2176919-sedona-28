@@ -40,7 +40,7 @@
   </header>
   <main class="main-index">
     <div class="main-index__presentation intro">
-      <img class="intro__image" src="./img/content-images/welcome.svg" alt="Добро пожаловать в Джордию. Седона. Потому что Гранд Каньон отстой." width="282" height="214">
+      <img class="intro__image" src="./img/stack.svg#welcome" alt="Добро пожаловать в Джордию. Седона. Потому что Гранд Каньон отстой." width="282" height="214">
     </div>
     <section class="advantages">
       <div class="advantages__intro content">
@@ -55,6 +55,9 @@
               <p class="advantages__description description">Седона — не аттракцион для туристов, там течёт&nbsp;своя жизнь</p>
             </div>
             <picture>
+              <source media="(min-width: 769px)" srcset="./img/content-images/photo-city-desktop.webp 1x, ./img/content-images/photo-city-desktop@2x.webp 2x" width="800" height="256">
+              <source media="(min-width: 321px) and (max-width: 768px)" srcset="./img/content-images/photo-city-tablet.webp 1x, ./img/content-images/photo-city-tablet@2x.webp 2x" width="512" height="256">
+              <source type="image/webp" srcset="./img/content-images/photo-city.webp 1x, ./img/content-images/photo-city@2x.webp 2x" width="320" height="260">
               <source media="(min-width: 769px)" srcset="./img/content-images/photo-city-desktop.jpg 1x, ./img/content-images/photo-city-desktop@2x.jpg 2x" width="800" height="256">
               <source media="(min-width: 321px) and (max-width: 768px)" srcset="./img/content-images/photo-city-tablet.jpg 1x, ./img/content-images/photo-city-tablet@2x.jpg 2x" width="512" height="256">
               <img class="advantages__photo" src="./img/content-images/photo-city.jpg" srcset="./img/content-images/photo-city@2x.jpg 2x" alt="Городок Седона." width="320" height="260">
@@ -135,7 +138,9 @@
       <div class="page-footer__copyright copyright">
         <span class="visually-hidden">Ссылка на интенсив по адаптивной верстке htmlacademy.</span>
         <a class="copyright__link description" href="https://htmlacademy.ru/intensive/adaptive">Разработано
-          <svg class="copyright__link-icon" width="27" height="35" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.65.45h-.1L.05 1.85v24.7l13.5 8 13.4-8V1.85L13.65.45Zm11.4 12.1-11.5-6.8v-.1h-.1l-.1-.1v.1l-11.4 6.9v-9l11.5-1.2 11.6 1.2v9Zm-11.6-5.3 11.5 6.7-4.5 2.6-7.1-4.2v1.4l5.9 3.5-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1-11.4-6.7 11.4-6.8Zm-11.5 8.3 11.4 6.8v1l-7.9-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.1-4.9v-5.2l3.4-2v10l-11.5 6.9-11.5-6.8v-9.9Z"/></svg>
+          <svg class="copyright__link-icon" width="27" height="35">
+            <use href="./img/stack.svg#htmlacademy"></use>
+          </svg>
         </a>
       </div>
     </div>
