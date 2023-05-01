@@ -6,33 +6,32 @@
   flex-direction: column;
   align-items: center;
   background-color: #b3d8ef;
-  background-image: url("../img/background-images/wings-phone.svg"), url("../img/background-images/hero-background.jpg");
+  background-image: url("../img/stack.svg#background-images-wings-phone"), url("../img/background-images/hero-background.jpg");
   background-repeat: no-repeat, no-repeat;
   background-position: bottom, center;
   background-size: cover, cover;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/background-images/wings-phone.svg"), url("../img/background-images/hero-background@2x.jpg");
+    background-image: url("../img/stack.svg#background-images-wings-phone"), url("../img/background-images/hero-background@2x.jpg");
     background-size: 320px auto;
   }
 
   @media (min-width: 321px) and (max-width: 768px) {
     padding-top: 78px;
     padding-bottom: 90px;
-    background-image: url("../img/background-images/wings-tablet.svg"), url("../img/background-images/hero-background-tablet.jpg");
-    background-position: bottom, center;
+    background-image: url("../img/stack.svg#background-images-wings-tablet"), url("../img/background-images/hero-background-tablet.jpg");
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/background-images/wings-tablet.svg"), url("../img/background-images/hero-background-tablet@2x.jpg");
+      background-image: url("../img/stack.svg#background-images-wings-tablet"), url("../img/background-images/hero-background-tablet@2x.jpg");
       background-size: 768px auto;
     }
   }
 
   @media (min-width: 769px) {
-    background-image: url("../img/background-images/wings-desktop.svg"), url("../img/background-images/hero-background-desktop.jpg");
+    background-image: url("../img/stack.svg#background-images-wings-desktop"), url("../img/background-images/hero-background-desktop.jpg");
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/background-images/wings-desktop.svg"), url("../img/background-images/hero-background-desktop@2x.jpg");
+      background-image: url("../img/stack.svg#background-images-wings-desktop"), url("../img/background-images/hero-background-desktop@2x.jpg");
       background-size: 1200px auto;
     }
   }
@@ -40,21 +39,20 @@
 
 .intro--inner {
   padding: 52px 0 67px 0;
-  background-image: url("../img/background-images/wings-phone.svg"), url("../img/background-images/form-hero-background.jpg");
+  background-image: url("../img/stack.svg#background-images-wings-phone"), url("../img/background-images/form-hero-background.jpg");
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/background-images/wings-phone.svg"), url("../img/background-images/form-hero-background@2x.jpg");
+    background-image: url("../img/stack.svg#background-images-wings-phone"), url("../img/background-images/form-hero-background@2x.jpg");
     background-size: 320px auto;
   }
 
   @media (min-width: 321px) and (max-width: 768px) {
     padding-top: 96px;
     padding-bottom: 108px;
-    background-image: url("../img/background-images/wings-tablet.svg"), url("../img/background-images/form-hero-background-tablet.jpg");
-    background-position: bottom, center;
+    background-image: url("../img/stack.svg#background-images-wings-tablet"), url("../img/background-images/form-hero-background-tablet.jpg");
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/background-images/wings-tablet.svg"), url("../img/background-images/form-hero-background-tablet@2x.jpg");
+      background-image: url("../img/stack.svg#background-images-wings-tablet"), url("../img/background-images/form-hero-background-tablet@2x.jpg");
       background-size: 768px auto;
     }
   }
@@ -62,10 +60,10 @@
   @media (min-width: 769px) {
     padding-top: 103px;
     padding-bottom: 120px;
-    background-image: url("../img/background-images/wings-desktop.svg"), url("../img/background-images/form-hero-background-desktop.jpg");
+    background-image: url("../img/stack.svg#background-images-wings-desktop"), url("../img/background-images/form-hero-background-desktop.jpg");
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/background-images/wings-desktop.svg"), url("../img/background-images/form-hero-background-desktop@2x.jpg");
+      background-image: url("../img/stack.svg#background-images-wings-desktop"), url("../img/background-images/form-hero-background-desktop@2x.jpg");
       background-size: 1200px auto;
     }
   }

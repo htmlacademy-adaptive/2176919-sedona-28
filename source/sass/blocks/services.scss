@@ -65,19 +65,19 @@
 
 .services__title--housing {
   &::before {
-    background-image: url("../img/icons/icon-house.svg");
+    background-image: url("../img/stack.svg#icons-icon-house");
   }
 }
 
 .services__title--food {
   &::before {
-    background-image: url("../img/icons/icon-burger.svg");
+    background-image: url("../img/stack.svg#icons-icon-burger");
   }
 }
 
 .services__title--souvenirs {
   &::before {
-    background-image: url("../img/icons/icon-gift.svg");
+    background-image: url("../img/stack.svg#icons-icon-gift");
 
     @media (min-width: $intermediate-width) {
       left: 50%;

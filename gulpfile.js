@@ -80,8 +80,8 @@ const svg = () => {
 
 const makeStack = () => {
   return gulp.src(['source/img/**/*.svg', '!source/img/content-images/logo-sedona.svg'])
-  .pipe(stacksvg())
   .pipe(svgo())
+  .pipe(stacksvg({ separator: `-` }))
   .pipe(gulp.dest('build/img'));
 }
 

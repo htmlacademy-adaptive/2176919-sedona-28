@@ -1,0 +1,25 @@
+.js-webp {
+  .intro {
+    background-image: url("../img/stack.svg#background-images-wings-phone"), url("../img/background-images/hero-background.webp");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/stack.svg#background-images-wings-phone"), url("../img/background-images/hero-background@2x.webp");
+    }
+
+    @media (min-width: 321px) and (max-width: 768px) {
+      background-image: url("../img/stack.svg#background-images-wings-tablet"), url("../img/background-images/hero-background-tablet.webp");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/stack.svg#background-images-wings-tablet"), url("../img/background-images/hero-background-tablet@2x.webp");
+      }
+    }
+
+    @media (min-width: 769px) {
+      background-image: url("../img/stack.svg#background-images-wings-desktop"), url("../img/background-images/hero-background-desktop.webp");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/stack.svg#background-images-wings-desktop"), url("../img/background-images/hero-background-desktop@2x.webp");
+      }
+    }
+  }
+}
