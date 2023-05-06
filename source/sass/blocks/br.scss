@@ -1,0 +1,29 @@
+@use "../global/variables.scss" as *;
+
+.br {
+  &::after {
+    content: "\A";
+  }
+}
+
+.br--advantages {
+  &::after {
+    white-space: pre;
+  }
+}
+
+.br--description {
+  &::after {
+    @media (min-width: $intermediate-width) {
+      white-space: pre;
+    }
+  }
+}
+
+.br--description-special {
+  &::after {
+    @media (min-width: $desktop-width) {
+      white-space: normal;
+    }
+  }
+}

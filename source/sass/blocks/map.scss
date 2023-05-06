@@ -1,0 +1,17 @@
+.map {
+  .ymaps-2-1-79-copyrights-pane {
+    display: none;
+  }
+}
+
+.map__image {
+  display: none;
+}
+
+.map--nojs {
+  .map__image {
+    display: block;
+    height: 350px;
+    flex-shrink: 0;
+  }
+}

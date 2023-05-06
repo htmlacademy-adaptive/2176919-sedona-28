@@ -53,11 +53,3 @@
     @include edge-distance(216px);
   }
 }
-
-.feedback__description {
-  @media (max-width: $mobile-width-only) {
-    br {
-      display: none;
-    }
-  }
-}

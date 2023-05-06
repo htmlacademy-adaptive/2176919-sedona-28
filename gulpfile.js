@@ -44,6 +44,7 @@ const html = () => {
 const script = () => {
   return gulp.src('source/js/*.js')
     .pipe(terser())
+    .pipe (rename('script.min.js'))
     .pipe(gulp.dest('build/js'));
 }
 
@@ -73,13 +74,13 @@ const createWebp = () => {
 // SVG
 
 const svg = () => {
-  return gulp.src('source/img/**/*.svg')
+  return gulp.src(['source/img/**/*.svg', '!source/img/icons/*.svg'])
     .pipe(svgo())
     .pipe(gulp.dest('build/img'));
 }
 
 const makeStack = () => {
-  return gulp.src(['source/img/**/*.svg', '!source/img/content-images/logo-sedona.svg'])
+  return gulp.src('source/img/icons/*.svg')
   .pipe(svgo())
   .pipe(stacksvg({ separator: `-` }))
   .pipe(gulp.dest('build/img'));
@@ -119,43 +120,49 @@ const server = (done) => {
   done();
 }
 
+// Reload
+
+const reload = (done) => {
+  browser.reload();
+  done();
+  }
+
 // Watcher
 
 const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
-  gulp.watch('source/*.html').on('change', browser.reload);
-}
+  gulp.watch('source/js/script.js', gulp.series(script));
+  gulp.watch('source/*.html', gulp.series(html, reload));
+  }
 
 // Build
 
 export const build = gulp.series(
   clean,
-  copy,
-  optimizeImages,
   gulp.parallel(
-    styles,
     html,
+    styles,
     script,
     svg,
     makeStack,
+    copy,
+    optimizeImages,
     createWebp
   ),
 );
 
 export default gulp.series(
   clean,
-  copy,
-  copyImages,
   gulp.parallel(
-    styles,
     html,
+    styles,
     script,
     svg,
     makeStack,
+    copy,
+    copyImages,
     createWebp
   ),
-  gulp.series(
-    server,
-    watcher
-  )
+  server,
+  watcher
 );

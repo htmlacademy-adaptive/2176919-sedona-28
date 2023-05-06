@@ -43,17 +43,20 @@
 
 .page-footer__social-link--vk {
   @include button-shape;
-  background-image: url("../img/icons/vk.svg");
+  background-image: url("../img/stack.svg#vk");
+  background-size: 24px auto;
 }
 
 .page-footer__social-link--telegram {
   @include button-shape;
-  background-image: url("../img/icons/telegram.svg");
+  background-image: url("../img/stack.svg#telegram");
+  background-size: 21px auto;
 }
 
 .page-footer__social-link--youtube {
   @include button-shape;
-  background-image: url("../img/icons/youtube.svg");
+  background-image: url("../img/stack.svg#youtube");
+  background-size: 20px auto;
 }
 
 .page-footer__title {

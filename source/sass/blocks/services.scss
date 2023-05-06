@@ -57,39 +57,35 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 60px 35px;
+    padding: 60px 25px;
     margin-bottom: 0;
     text-align: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 69px 50px;
   }
 }
 
 .services__title--housing {
   &::before {
-    background-image: url("../img/stack.svg#icons-icon-house");
+    background-image: url("../img/stack.svg#icon-house");
   }
 }
 
 .services__title--food {
   &::before {
-    background-image: url("../img/stack.svg#icons-icon-burger");
+    background-image: url("../img/stack.svg#icon-burger");
   }
 }
 
 .services__title--souvenirs {
   &::before {
-    background-image: url("../img/stack.svg#icons-icon-gift");
+    background-image: url("../img/stack.svg#icon-gift");
 
     @media (min-width: $intermediate-width) {
       left: 50%;
       transform: translateX(-40%);
-    }
-  }
-}
-
-.services__description {
-  @media (max-width: $desktop-width-only) {
-    br {
-      display: none;
     }
   }
 }

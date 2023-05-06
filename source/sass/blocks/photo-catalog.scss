@@ -65,12 +65,6 @@
 .photo-catalog__description {
   margin-bottom: 38px;
 
-  @media (max-width: $mobile-width-only) {
-    br {
-      display: none;
-    }
-  }
-
   @media (min-width: $tablet-width) {
     margin-bottom: 67px;
   }

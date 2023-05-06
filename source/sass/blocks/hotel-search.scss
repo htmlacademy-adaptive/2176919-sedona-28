@@ -18,8 +18,7 @@
   border: none;
   display: block;
   width: 100%;
-  background-image: url("../img/background-images/map-sedona.jpg");
-  background-repeat: no-repeat;
+  height: 350px;
 }
 
 .hotel-search__wrapper {
@@ -44,10 +43,4 @@
 
 .hotel-search__text {
   margin: 0 0 34px 0;
-
-  @media (max-width: $mobile-width-only) {
-    br {
-      display: none;
-    }
-  }
 }
