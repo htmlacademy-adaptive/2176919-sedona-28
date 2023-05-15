@@ -1,12 +1,8 @@
+@use "../global/mixins.scss" as *;
 @use "../global/variables.scss" as *;
 
 .main-header {
   position: relative;
-  margin-bottom: 56px;
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 0;
-  }
 }
 
 .main-header__logo {
@@ -23,4 +19,10 @@
   @media (min-width: $tablet-width) {
     top: 0;
   }
+}
+
+.main-header__logo-image {
+  object-fit: cover;
+  width: 185px;
+  height: 96px;
 }

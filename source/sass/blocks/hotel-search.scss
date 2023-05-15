@@ -6,24 +6,31 @@
   flex-direction: column;
   align-items: center;
   padding-bottom: 8px;
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
 }
 
 .hotel-search__button {
   display: block;
   text-decoration: none;
   max-width: 458px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 458px;
+  }
 }
 
 .hotel-search__map {
   border: none;
   display: block;
   width: 100%;
-  background-image: url("../img/background-images/map-sedona.jpg");
-  background-repeat: no-repeat;
+  height: 350px;
 }
 
 .hotel-search__wrapper {
-  padding: 38px 18px 49px 18px;
+  padding: 40px 18px 49px 18px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,20 +41,22 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 60px 371px 66px 371px;
+    padding: 61px 371px 66px 371px;
   }
 }
 
 .hotel-search__title {
-  margin: 0 0 30px 0;
+  margin: 0 0 22px 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 33px;
+  }
 }
 
 .hotel-search__text {
-  margin: 0 0 34px 0;
+  margin: 0 0 32px 0;
 
-  @media (max-width: $mobile-width-only) {
-    br {
-      display: none;
-    }
+  @media (min-width: $tablet-width) {
+    margin-bottom: 45px;
   }
 }

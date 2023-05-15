@@ -2,7 +2,6 @@
   position: relative;
   display: block;
   padding-left: 62px;
-  padding-top: 10px;
   cursor: pointer;
 }
 
@@ -16,6 +15,7 @@
 
 .control__mark {
   background-color: #f2f2f2;
+  margin-top: -10px;
 }
 
 .control__mark::before {

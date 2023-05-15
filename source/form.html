@@ -3,8 +3,13 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="description" content="Сайт">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Форма отзыва</title>
+  <link rel="preload" href="css/style.min.css" as="style">
+  <link rel="preload" href="js/script.min.js" as="script">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
@@ -14,7 +19,7 @@
 </head>
 
 <body class="page__body">
-  <header class="main-header">
+  <header class="main-header page__header">
     <a class="main-header__logo" href="index.html">
       <img class="main-header__logo-image" src="./img/content-images/logo-sedona.svg" alt="Логотип города Седона." width="185" height="96">
     </a>
@@ -41,12 +46,12 @@
   <main class="form-index">
     <h1 class="visually-hidden">Форма обратной связи городка Седона.</h1>
     <div class="form-index__presentation intro intro--inner">
-      <img class="intro__image intro__image--inner" src="./img/stack.svg#welcome" alt="Седона." width="229" height="39">
+      <img class="intro__image intro__image--inner" src="./img/stack-main.svg#welcome-short" alt="Седона." width="229" height="39">
     </div>
     <section class="feedback">
       <div class="feedback__intro content content--form">
         <h2 class="feedback__title title">Оставьте свой отзыв</h2>
-        <p class="feedback__description description">Помогите нашим отелям стать лучше! оставьте отзыв о них, <br>а также о посещенных вами достопримечательностях</p>
+        <p class="feedback__description description">Помогите нашим отелям стать лучше! оставьте отзыв о них,<span class="br br--description"></span> а также о посещенных вами достопримечательностях</p>
       </div>
         <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="post">
         <fieldset class="feedback-form__group feedback-form__group--introduce">
@@ -106,34 +111,34 @@
           </ul>
         </fieldset>
         <fieldset class="feedback-form__group feedback-form__group--special feedback-form__group--landmark">
-          <legend class="feedback-form__title title">Посещенные <br>достопримечательности:</legend>
+          <legend class="feedback-form__title title">Посещенные<span class="br br--description"></span> достопримечательности:</legend>
           <ul class="feedback-form__list">
             <li class="feedback-form__item">
               <label class="feedback-form__label control" for="devil's-bridge">
                 <input class="visually-hidden control__input control__input--checkbox" id="devil's-bridge" type="checkbox" name="landmark" value="devil's-bridge" checked>
                 <span class="control__mark control__mark--checkbox"></span>
-                <span class="control__label">Мост Дьявола</span>
+                <span class="control__label">Мост&nbsp;Дьявола</span>
               </label>
             </li>
             <li class="feedback-form__item">
               <label class="feedback-form__label control" for="mount-bell">
                 <input class="visually-hidden control__input control__input--checkbox" id="mount-bell" type="checkbox" name="landmark" value="mount-bell" checked>
                 <span class="control__mark control__mark--checkbox"></span>
-                <span class="control__label">Гора-Колокол</span>
+                <span class="control__label">Гора&#8209;Колокол</span>
               </label>
             </li>
             <li class="feedback-form__item">
               <label class="feedback-form__label control" for="slide-park">
                 <input class="visually-hidden control__input control__input--checkbox" id="slide-park" type="checkbox" name="landmark" value="slide-park" checked>
                 <span class="control__mark control__mark--checkbox"></span>
-                <span class="control__label">Слайд-парк</span>
+                <span class="control__label">Слайд&#8209;парк</span>
               </label>
             </li>
             <li class="feedback-form__item">
               <label class="feedback-form__label control" for="red-rocks">
                 <input class="visually-hidden control__input control__input--checkbox" id="red-rocks" type="checkbox" name="landmark" value="red-rocks">
                 <span class="control__mark control__mark--checkbox"></span>
-                <span class="control__label">Красные скалы</span>
+                <span class="control__label">Красные&nbsp;скалы</span>
               </label>
             </li>
           </ul>
@@ -141,6 +146,7 @@
         <fieldset class="feedback-form__group feedback-form__group--special feedback-form__group--emotions">
           <legend class="feedback-form__title title">Опишите свои эмоции:</legend>
           <label class="feedback-form__label" for="emotions">
+            <span class="visually-hidden">В этом текстовом поле вы можете написать, что вам особенно понравилось у нас.</span>
             <textarea class="feedback-form__textarea" id="emotions" name="emotions" placeholder="Опишите подробно все свои восторги"></textarea>
           </label>
         </fieldset>
@@ -195,7 +201,7 @@
       <button class="feedback-modal__button button button--modal-success" type="button">Закрыть окно</button>
     </div>
   </div>
-  <script src="./js/script.js"></script>
+  <script src="./js/script.min.js"></script>
 </body>
 
 </html>

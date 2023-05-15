@@ -10,9 +10,10 @@
 .main-navigation__link {
   @include menu-shape;
   display: block;
-  padding: 17px 0 12px 0;
+  padding: 16px 0 12px 0;
   font-weight: 700;
   font-size: 18px;
+  line-height: 26px;
   text-decoration: none;
   color: #ffffff;
   border-top: solid 1px rgba(255, 255, 255, 0.2);
@@ -23,6 +24,7 @@
   }
 
   @media (min-width: $tablet-width) {
+    display: block;
     font-size: 14px;
     color: #000000;
     border: none;
@@ -50,14 +52,19 @@
   }
 
   @media (min-width: $tablet-width) {
-    @include edge-distance(50px);
+    @include edge-distance(28px);
     position: relative;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    column-gap: 30px;
+    column-gap: 35px;
     row-gap: 10px;
     background-color: #ffffff;
     z-index: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include edge-distance(71px);
+    column-gap: 125px;
   }
 }
 
@@ -65,9 +72,23 @@
   @media (min-width: $tablet-width) {
     text-align: start;
 
+    &:first-child {
+      margin-left: 21px;
+    }
+
+    &:nth-child(2n) {
+      margin-left: 5px;
+    }
+
     &:nth-child(3n),
     &:nth-child(4n) {
       text-align: end;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &:first-child {
+      margin-left: 22px;
     }
   }
 }
