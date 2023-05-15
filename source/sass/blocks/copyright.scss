@@ -11,9 +11,15 @@
 
   @media (min-width: $tablet-width) {
     justify-content: end;
+    padding-top: 3px;
   }
 }
 
 .copyright__link-icon {
   margin-left: 15px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 13px;
+    margin-bottom: 3px;
+  }
 }

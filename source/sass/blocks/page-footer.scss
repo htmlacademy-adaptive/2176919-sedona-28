@@ -1,30 +1,46 @@
 @use "../global/mixins.scss" as *;
 @use "../global/variables.scss" as *;
 
+.page-footer {
+  position: sticky;
+	top: 100vh;
+}
+
 .page-footer__wrapper {
-  padding: 33px 18px;
+  padding: 35px 18px;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 30px;
+  gap: 31px;
 
   @media (min-width: $tablet-width) {
-    padding: 36px 60px;
+    padding: 28px 60px;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
   }
 
   @media (min-width: $desktop-width) {
     padding: 36px 120px;
+    gap: 50px;
   }
 }
 
 .page-footer__social-list {
   @include reset-list;
+  padding-top: 1px;
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
   justify-content: center;
   align-content: center;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 8px;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 10px;
+  }
 }
 
 .page-footer__social-item {
@@ -39,24 +55,22 @@
   background-color: #81b3d2;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 24px auto;
 }
 
 .page-footer__social-link--vk {
   @include button-shape;
   background-image: url("../img/stack.svg#vk");
-  background-size: 24px auto;
 }
 
 .page-footer__social-link--telegram {
   @include button-shape;
   background-image: url("../img/stack.svg#telegram");
-  background-size: 21px auto;
 }
 
 .page-footer__social-link--youtube {
   @include button-shape;
   background-image: url("../img/stack.svg#youtube");
-  background-size: 20px auto;
 }
 
 .page-footer__title {

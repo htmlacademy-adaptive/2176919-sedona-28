@@ -31,8 +31,6 @@
     }
 
     @media (min-width: 321px) and (max-width: 768px) {
-      padding-top: 96px;
-      padding-bottom: 108px;
       background-image: url("../img/stack.svg#wings-tablet"), url("../img/background-images/form-hero-background-tablet.webp");
 
       @media (min-resolution: 2dppx) {
@@ -41,8 +39,6 @@
     }
 
     @media (min-width: 769px) {
-      padding-top: 103px;
-      padding-bottom: 120px;
       background-image: url("../img/stack.svg#wings-desktop"), url("../img/background-images/form-hero-background-desktop.webp");
 
       @media (min-resolution: 2dppx) {

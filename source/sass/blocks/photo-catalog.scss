@@ -2,7 +2,7 @@
 @use "../global/variables.scss" as *;
 
 .photo-catalog__wrapper {
-  padding-top: 37px;
+  padding-top: 38px;
   padding-bottom: 25px;
 
   @media (min-width: $tablet-width) {
@@ -10,7 +10,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 100px 0 0 0;
+    padding: 98px 0 0 0;
   }
 }
 
@@ -37,6 +37,7 @@
 }
 
 .photo-catalog__image {
+  @include img;
   display: block;
   min-height: 319px;
   max-height: 400px;
@@ -45,6 +46,10 @@
   @media (max-width: $mobile-width-only) {
     padding-top: 24px;
     padding-bottom: 15px;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: 267px;
   }
 }
 
@@ -59,14 +64,24 @@
 }
 
 .photo-catalog__title {
-  margin-bottom: 28px;
+  margin-bottom: 26px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 32px;
+    font-size: 30px;
+    line-height: 26px;
+  }
 }
 
 .photo-catalog__description {
-  margin-bottom: 38px;
+  margin-bottom: 36px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 67px;
+    margin-bottom: 81px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 89px;
   }
 }
 
@@ -80,6 +95,7 @@
 
   @media (min-width: $desktop-width) {
     position: absolute;
+    padding: 17px 20px 17px 25px;
     background-color: rgba(0, 0, 0, 0.3);
     color: #ffffff;
     bottom: 0;
@@ -103,12 +119,21 @@
     mask-image: var(--like-icon);
     mask-repeat: no-repeat;
     margin-right: 14px;
+    flex-shrink: 0;
+
+    @media (min-width: $tablet-width) {
+      margin: 0 10px 10px 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin: 0 10px 6px 0;
+    }
   }
 
   @media (min-width: $tablet-width) {
     grid-column: 2/3;
     grid-row: 1/3;
-    align-self: center;
+    align-items: center;
     justify-self: end;
   }
 
@@ -122,9 +147,14 @@
 }
 
 .photo-catalog__signature {
-  margin: 0;
+  margin: 0 0 1px 0;
   font-size: inherit;
   font-weight: 700;
+
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 4px;
+  }
 }
 
 .photo-catalog__item {
@@ -163,4 +193,14 @@
 
 .photo-catalog__item--first {
   grid-column: 1/-1;
+
+  @media (min-width: $desktop-width) {
+    .photo-catalog__signature-wrapper {
+      padding: 22px 20px 15px 20px;
+    }
+
+    .photo-catalog__signature {
+      margin-bottom: 1px;
+    }
+  }
 }

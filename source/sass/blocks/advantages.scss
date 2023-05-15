@@ -4,7 +4,7 @@
 .advantages__intro {
   display: flex;
   flex-direction: column;
-  padding: 32px 18px 16px 18px;
+  padding: 33px 18px 24px 18px;
 
   @media (min-width: $intermediate-width) {
     padding: 40px 18px 48px 18px;
@@ -15,7 +15,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 59px;
+    padding-top: 61px;
     padding-bottom: 44px;
   }
 }
@@ -31,6 +31,7 @@
 }
 
 .advantages__photo {
+  @include img;
   display: block;
   width: 100%;
   max-height: 260px;
@@ -55,6 +56,10 @@
 
 .advantages__title {
   margin: 0 0 11px 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 15px;
+  }
 }
 
 .advantages__description {
@@ -66,30 +71,19 @@
 
 .advantages__title--intro {
   margin: 0 0 35px 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 30px;
+  }
 }
 
 .advantages__item-wrapper {
   display: flex;
   flex-direction: column;
-  padding: 32px 18px;
+  padding: 37px 28px;
   background-color: #81b3d2;
   color: #ffffff;
   flex-shrink: 0;
-
-  @media (max-width: $mobile-width) {
-    &:first-child::before {
-      position: relative;
-      content: "";
-      width: 320px;
-      height: 37px;
-      top: -37px;
-      left: -18px;
-      background-image: url("../img/stack.svg#white-spear");
-      background-repeat: no-repeat;
-      background-position: 50%;
-      padding-top: 37px;
-    }
-  }
 
   @media (min-width: $intermediate-width) {
     width: 42%;
@@ -98,7 +92,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    @include edge-distance(40px);
+    @include edge-distance(33px);
     width: 33.3%;
     max-width: 400px;
   }
@@ -113,7 +107,7 @@
   background-color: #eeeeee;
 
   @media (max-width: $intermediate-width) {
-    padding: 24px 35px 28px 35px;
+    padding: 25px 35px;
     position: relative;
 
     &:not(:last-child)::before {
@@ -142,9 +136,13 @@
 }
 
 .advantages__item--photo {
-  @media (min-width: 512px) {
+  @media (min-width: $intermediate-width) {
     display: flex;
     grid-column: 1/-1;
     grid-row: 2/3;
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
   }
 }

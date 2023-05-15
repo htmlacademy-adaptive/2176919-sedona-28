@@ -1,3 +1,4 @@
+@use "../global/mixins.scss" as *;
 @use "../global/variables.scss" as *;
 
 .intro {
@@ -16,13 +17,16 @@
   }
 
   @media (min-width: 321px) and (max-width: 768px) {
-    padding-top: 78px;
-    padding-bottom: 90px;
     background-image: url("../img/stack.svg#wings-tablet"), url("../img/background-images/hero-background-tablet.jpg");
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/stack.svg#wings-tablet"), url("../img/background-images/hero-background-tablet@2x.jpg");
     }
+  }
+
+  @media (min-width: 321px) {
+    padding-top: 78px;
+    padding-bottom: 90px;
   }
 
   @media (min-width: 769px) {
@@ -44,7 +48,8 @@
 
   @media (min-width: 321px) and (max-width: 768px) {
     padding-top: 96px;
-    padding-bottom: 108px;
+    padding-bottom: 116px;
+    background-position: bottom, bottom;
     background-image: url("../img/stack.svg#wings-tablet"), url("../img/background-images/form-hero-background-tablet.jpg");
 
     @media (min-resolution: 2dppx) {
@@ -55,6 +60,7 @@
   @media (min-width: 769px) {
     padding-top: 103px;
     padding-bottom: 120px;
+    background-position: bottom, bottom;
     background-image: url("../img/stack.svg#wings-desktop"), url("../img/background-images/form-hero-background-desktop.jpg");
 
     @media (min-resolution: 2dppx) {
@@ -64,15 +70,12 @@
 }
 
 .intro__image {
+  @include img;
   display: block;
   width: 282px;
   height: 100%;
 
   @media (min-width: $tablet-width) {
-    width: 461px;
-  }
-
-  @media (min-width: $desktop-width) {
     width: 460px;
   }
 }
@@ -81,11 +84,8 @@
   width: 229px;
 
   @media (min-width: $intermediate-width) {
-    width: 456px;
-  }
-
-  @media (min-width: $tablet-width) {
-    width: 460px;
+    width: 457px;
+    margin-left: 4px;
   }
 
   @media (min-width: $desktop-width) {
