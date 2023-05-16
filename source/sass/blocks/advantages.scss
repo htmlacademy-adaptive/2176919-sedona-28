@@ -139,7 +139,6 @@
   @media (min-width: $intermediate-width) {
     display: flex;
     grid-column: 1/-1;
-    grid-row: 2/3;
 
     &:nth-child(even) {
       flex-direction: row-reverse;

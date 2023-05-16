@@ -5,10 +5,10 @@
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 49px;
-  padding: 24px 20px 76px 20px;
+  padding: 24px 20px 0 20px;
 
   @media (min-width: $tablet-width) {
-    padding: 24px 60px 68px 60px;
+    padding: 24px 60px 49px 60px;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 58px;
     row-gap: 47px;
@@ -18,7 +18,7 @@
     @include edge-distance(120px);
     column-gap: 100px;
     row-gap: 56px;
-    padding-bottom: 50px;
+    padding-bottom: 41px;
   }
 }
 
@@ -144,6 +144,8 @@
 }
 
 .feedback-form__group--emotions {
+  margin-bottom: 1px;
+
   .feedback-form__title {
     margin-bottom: 10px;
 
@@ -155,6 +157,11 @@
   @media (min-width: $tablet-width) {
     text-align: center;
     margin-top: -3px;
+    margin-bottom: -5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: -8px;
   }
 }
 
@@ -235,6 +242,9 @@
 .feedback-form__title {
   margin: 0 auto;
   margin-bottom: 20px;
+  display: block;
+  position: relative;
+  width: 100%;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 28px;

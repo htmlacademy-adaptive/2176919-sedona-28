@@ -56,16 +56,15 @@
   grid-template-columns: 1fr;
   gap: 3px;
   margin-bottom: 23px;
+  grid-column: 1/-1;
 
   @media (min-width: $tablet-width) {
     grid-template-columns: repeat(2, 1fr);
-    margin-bottom: 72px;
     justify-items: stretch;
     align-items: center;
   }
 
   @media (min-width: $desktop-width) {
-    @include edge-distance(216px);
-    margin-bottom: 64px;
+    margin-top: -6px;
   }
 }
