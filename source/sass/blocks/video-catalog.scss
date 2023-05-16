@@ -57,6 +57,15 @@
   background-repeat: no-repeat;
   border: none;
   background-color: transparent;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet-width) {
     margin-top: 0;
